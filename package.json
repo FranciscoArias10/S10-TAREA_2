@@ -1,0 +1,32 @@
+{
+  "name": "catalogo-productos-favoritos-api",
+  "version": "1.0.0",
+  "description": "API REST con Node.js, Express, PostgreSQL y JWT para gestión de catálogo de productos y favoritos personales con autorización por roles.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "db:init": "node src/database/init.js",
+    "seed": "node src/database/init.js --seed",
+    "test": "node scripts/test-api.js"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "postgresql",
+    "jwt",
+    "rest-api",
+    "rbac"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@electric-sql/pglite": "^0.3.15",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.13.1"
+  }
+}
+
