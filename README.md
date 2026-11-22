@@ -4,14 +4,13 @@ API REST desarrollada con **Node.js** y **Express** para gestionar un catálogo 
 
 ---
 
-## 👤 Autor
+## Autor
 
 - **Estudiante:** Francisco Arias (`fariasp2@unemi.edu.ec`)
-- **Modalidad:** Desarrollo individual
 
 ---
 
-## 🎯 Propósito
+## Propósito
 
 Proveer una API REST modular, segura y verificable que separe explícitamente **rutas**, **middlewares**, **controladores** y **repositorios de acceso a datos**, permitiendo:
 - Consulta pública del catálogo de productos y filtrado por categoría.
@@ -21,7 +20,7 @@ Proveer una API REST modular, segura y verificable que separe explícitamente **
 
 ---
 
-## 🗄️ Elección de Base de Datos y Justificación
+## Elección de Base de Datos y Justificación
 
 Se seleccionó **PostgreSQL** (usando el controlador oficial `pg` con consultas SQL parametrizadas `$1, $2, ...` y soporte opcional embebido persistente en disco con `@electric-sql/pglite` para ejecución reproducible sin servicios externos).
 
@@ -36,7 +35,7 @@ Se seleccionó **PostgreSQL** (usando el controlador oficial `pg` con consultas 
 
 ---
 
-## 📁 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```text
 S10-TAREA_2/
@@ -79,7 +78,7 @@ S10-TAREA_2/
 
 ---
 
-## ⚙️ Requisitos Previos
+## Requisitos Previos
 
 - **Node.js** `v18.x` o superior (probado en `v24.21.0`).
 - **NPM** `v9.x` o superior.
@@ -88,7 +87,7 @@ S10-TAREA_2/
 
 ---
 
-## 🚀 Instalación desde Copia Limpia
+## Instalación desde Copia Limpia
 
 1. **Clonar el repositorio e ingresar al directorio:**
    ```bash
@@ -110,7 +109,7 @@ S10-TAREA_2/
 
 ---
 
-## 🔐 Variables de Entorno
+## Variables de Entorno
 
 | Variable | Descripción | Ejemplo |
 |---|---|---|
@@ -128,7 +127,7 @@ S10-TAREA_2/
 
 ---
 
-## 🛠️ Inicialización de Datos y del Administrador
+## Inicialización de Datos y del Administrador
 
 El rol `admin` **no puede obtenerse** mediante el endpoint público `POST /api/auth/registro`. Se crea exclusivamente de forma local mediante el script de inicialización:
 
@@ -145,7 +144,7 @@ Este comando ejecuta `src/database/init.js`, el cual:
 
 ---
 
-## ▶️ Comandos de Ejecución
+## Comandos de Ejecución
 
 ```bash
 # Inicializar esquema, usuario admin y datos de ejemplo
@@ -165,7 +164,7 @@ La API quedará disponible tanto bajo el prefijo **`http://localhost:3000/api`**
 
 ---
 
-## 📡 Documentación de Rutas y Criterio de Códigos de Estado
+## Documentación de Rutas y Criterio de Códigos de Estado
 
 ### Criterio de Códigos HTTP
 - **`200 OK`**: Consultas (`GET`), inicio de sesión (`POST /auth/login`), actualizaciones (`PUT`) y eliminaciones (`DELETE`) exitosas.
@@ -296,7 +295,7 @@ La API quedará disponible tanto bajo el prefijo **`http://localhost:3000/api`**
 
 ---
 
-## 🧪 Cómo Ejecutar las Pruebas
+## Cómo Ejecutar las Pruebas
 
 ### Opción A: Pruebas automatizadas en terminal (`npm test`)
 Ejecuta 30 aserciones HTTP end-to-end contra un directorio temporal aislado (`.pgdata-test`), incluyendo verificación de firma/expiración JWT, roles, aislamiento entre Usuarios A y B, limpieza en cascada y **reinicio completo del servidor y base de datos**:
@@ -325,7 +324,7 @@ npm test
 
 ---
 
-## 📚 Recursos y Herramientas Utilizadas
+## Recursos y Herramientas Utilizadas
 
 - [Express.js](https://expressjs.com/) — Enrutamiento y middlewares HTTP.
 - [node-postgres (`pg`)](https://node-postgres.com/) y [PGlite (`@electric-sql/pglite`)](https://pglite.dev/) — Conexión PostgreSQL con consultas parametrizadas y soporte embebido persistente.
